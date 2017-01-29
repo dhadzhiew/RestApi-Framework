@@ -20,6 +20,7 @@ class SimpleDB
     {
         $this->app = App::getInstance();
         $this->db = $this->app->getDbConnection();
+		$this->db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     }
 
     /**
